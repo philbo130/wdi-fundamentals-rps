@@ -25,18 +25,20 @@ var playerMove = prompt("Please choose either rock, paper, or scissors.");
 
 function getPlayerMove(move) {
     // Write an expression that operates on a variable called `move`
-    var playerMove = prompt("Please choose either rock, paper, or scissors.");
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return playerMove;
+    var playerMove = prompt("Please choose either rock, paper, or scissors.");
+    playerMove = move||getinput();
+    return move;
 }
  var computerMove = randomPlay();
  
 function getComputerMove(move) {
     // Write an expression that operates on a variable called `move`
-    var computerMove = randomPlay();
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
+    var computerMove;
+    computerMove = move || randomPlay();
     return computerMove;
 }
 var playerWins = 0
